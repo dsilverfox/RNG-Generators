@@ -57,7 +57,7 @@ let displayData = (json) => {
 
   let color = document.createElement("p");
   color.className = "color";
-  color.innerText = `Favorite Color: ${json[x]["favorite color"]}`;
+  color.innerText = `Favorite Color: ${json[x].color}`;
   color.style = "font-family: Montserrat; color: white;";
 
   //Occupations
@@ -128,26 +128,31 @@ let displayData = (json) => {
   country.innerText = `Country: ${json[x].country}`;
   country.style = "font-family: Montserrat; color: white;";
 
+  let title = document.createElement("h3");
+  title.className = "title";
+  title.innerText = "All Categories";
+  title.style = "font-family: Montserrat; color: white;";
+
   //HTML BUILD
 
   character.removeChild(placeholder);
-  resultsid1.appendChild(animal);
-  resultsid1.appendChild(plant);
-  resultsid1.appendChild(genres);
-  resultsid1.appendChild(color);
-  resultsid1.appendChild(companies);
-  resultsid1.appendChild(job);
-  resultsid1.appendChild(slogan);
-  resultsid1.appendChild(catch_phrase);
-  resultsid1.appendChild(buzzword);
-  resultsid1.appendChild(make);
-  resultsid1.appendChild(model);
-  resultsid1.appendChild(year);
-  resultsid1.appendChild(race);
-  resultsid1.appendChild(university);
-  resultsid1.appendChild(city);
-  resultsid1.appendChild(state);
-  resultsid1.appendChild(country);
+  character.appendChild(animal);
+  character.appendChild(plant);
+  character.appendChild(genres);
+  character.appendChild(color);
+  character.appendChild(companies);
+  character.appendChild(job);
+  character.appendChild(slogan);
+  character.appendChild(catch_phrase);
+  character.appendChild(buzzword);
+  character.appendChild(make);
+  character.appendChild(model);
+  character.appendChild(year);
+  character.appendChild(race);
+  character.appendChild(university);
+  character.appendChild(city);
+  character.appendChild(state);
+  character.appendChild(country);
 };
 
 favoritesButton.addEventListener("click", favData);
@@ -177,15 +182,17 @@ let displayFav = (json) => {
 
   let color = document.createElement("p");
   color.className = "color";
-  color.innerText = `Favorite Color: ${json[x]["favorite color"]}`;
+  color.innerText = `Favorite Color: ${json[x].color}`;
   color.style = "font-family: Montserrat; color: white;";
 
+
   //FAVORiTES HTMl
+
   character.removeChild(placeholder);
-  resultsid2.appendChild(animal);
-  resultsid2.appendChild(plant);
-  resultsid2.appendChild(genres);
-  resultsid2.appendChild(color);
+  character.appendChild(animal);
+  character.appendChild(plant);
+  character.appendChild(genres);
+  character.appendChild(color);
 };
 
 occupationButton.addEventListener("click", jobData);
@@ -221,17 +228,27 @@ let displayJob = (json) => {
 
   let buzzword = document.createElement("p");
   buzzword.className = "buzzword";
-  buzzword.innerText = `Favorite Plant: ${json[x].buzzword}`;
+  buzzword.innerText = `Buzzword: ${json[x].buzzword}`;
   buzzword.style = "font-family: Montserrat; color:white;";
+
+  let title = document.createElement("h3");
+  title.className = "title";
+  title.innerText = "Occupation Categories";
+  title.style = "font-family: Montserrat; color: white;";
 
   //OCCUPATiONS HTML
 
   character.removeChild(placeholder);
-  resultsid3.appendChild(companies);
-  resultsid3.appendChild(job);
-  resultsid3.appendChild(slogan);
-  resultsid3.appendChild(catch_phrase);
-  resultsid3.appendChild(buzzword);
+  character.appendChild(companies);
+  character.appendChild(job);
+  character.appendChild(slogan);
+  character.appendChild(catch_phrase);
+  character.appendChild(buzzword);
+
+  //clean search
+  while (character.firstChild) {
+    character.removeChild(character.firstChild);
+  }
 };
 
 carButton.addEventListener("click", carData);
@@ -244,6 +261,7 @@ async function carData() {
 
 let displayCar = (json) => {
   let x = getRandomNumber(0, json.length - 1);
+
   let make = document.createElement("p");
   make.className = "make";
   make.innerText = `Make: ${json[x].make}`;
@@ -259,11 +277,22 @@ let displayCar = (json) => {
   year.innerText = `Year: ${json[x].year}`;
   year.style = "font-fam1ily: Montserrat; color: white;";
 
+  let title = document.createElement("h3");
+  title.className = "title";
+  title.innerText = "Car Categories";
+  title.style = "font-family: Montserrat; color: white;";
+
   //CAR HTML
+
   character.removeChild(placeholder);
-  resultsid4.appendChild(make);
-  resultsid4.appendChild(model);
-  resultsid4.appendChild(year);
+  character.appendChild(make);
+  character.appendChild(model);
+  character.appendChild(year);
+
+  //clean search
+  while (character.firstChild) {
+    character.removeChild(character.firstChild);
+  }
 };
 
 demographicsButton.addEventListener("click", demographicsData);
@@ -302,14 +331,27 @@ let displayDemo = (json) => {
   country.innerText = `Country: ${json[x].country}`;
   country.style = "font-family: Montserrat; color: white;";
 
+  let title = document.createElement("h3");
+  title.className = "title";
+  title.innerText = "Demographic Categories";
+  title.style = "font-family: Montserrat; color: white;";
+
   //DEMOGRAPHiCS HTML
+
   character.removeChild(placeholder);
-  resultsid5.appendChild(race);
-  resultsid5.appendChild(university);
-  resultsid5.appendChild(city);
-  resultsid5.appendChild(state);
-  resultsid5.appendChild(country);
+  character.appendChild(race);
+  character.appendChild(university);
+  character.appendChild(city);
+  character.appendChild(state);
+  character.appendChild(country);
+
+  //clean search
+  while (character.firstChild) {
+    character.removeChild(character.firstChild);
+  }
 };
+
+
 
 //Responsive topnav.
 function myFunction() {

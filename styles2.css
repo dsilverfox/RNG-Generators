@@ -176,7 +176,7 @@ form {
     display:grid;
     background-color: black;
     grid-area: sidebarleft;
-    background-image: url(./Assets/Smoke_column_left.jpg);
+    background-image: url(./Assets/NewColumnLeft.jpg);
 }
 .character {
     min-height: 100vh;
@@ -184,14 +184,36 @@ form {
     font-family: 'Shadows Into Light', cursive;
     background-color: black;
     grid-area: character;
-    padding: 20px;              
+    padding: 20px;  
+    grid-template-areas: "resultsid1 resultsid2 resultsid3"
+                         "resultsid4 resultsid5 resultsid6";
+    grid-template-columns: auto auto auto;
 }
 
+.resultsid1 {
+  display:block;
+}
+.resultsid2 {
+  display:block;
+}
+.resultsid3 {
+  display:block;
+}
+.resultsid4 {
+  display:block;
+}
+.resultsid5 {
+  display:block;
+}
+
+.resultsid6 {
+  display:block;
+}
 .sidebarright {
     display:grid;
     background-color:black;
     grid-area: sidebarright;
-    background-image: url(./Assets/Smoke_column.jpg);
+    background-image: url(./Assets/NewColumnLeft2.jpg);
 }
 
 .footerleft {

@@ -3,18 +3,19 @@ const myURL = "https://my.api.mockaroo.com/api_project_1.json?key=08fcd730";
 const detailURL =
   "https://my.api.mockaroo.com/random_details.json?key=08fcd730";
 
+const unsplash =
+  "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&fm=jpg&fit=crop&w=1080&q=80&fit=max";
+
 let allButton = document.getElementById("id1");
 let favoritesButton = document.getElementById("id2");
 let occupationButton = document.getElementById("id3");
 let carButton = document.getElementById("id4");
 let demographicsButton = document.getElementById("id5");
 let character = document.querySelector(".character");
-let resultsid1 = document.querySelector(".resultsid1");
-let resultsid2 = document.querySelector(".resultsid2");
-let resultsid3 = document.querySelector(".resultsid3");
-let resultsid4 = document.querySelector(".resultsid4");
-let resultsid5 = document.querySelector(".resultsid5");
+let characterleft = document.querySelector('.characterleft')
+let characterright = document.querySelector(".characterright");
 let placeholder = document.querySelector(".placeholder");
+let picButton = document.querySelector(".pic")
 
 const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
@@ -40,119 +41,113 @@ let displayData = (json) => {
 
   //Favorites
 
-  let animal = document.createElement("p");
+  let animal = document.createElement('li');
   animal.className = "animal";
   animal.innerText = `Favorite Animal: ${json[x].animal}`;
   animal.style = "font-family: Montserrat; color: white;";
 
-  let plant = document.createElement("p");
+  let plant = document.createElement("li");
   plant.className = "plant";
   plant.innerText = `Favorite Plant: ${json[x].plant}`;
   plant.style = "font-family: Montserrat; color: white;";
 
-  let genres = document.createElement("p");
+  let genres = document.createElement("li");
   genres.className = "genres";
   genres.innerText = `Genres: ${json[x].genres}`;
   genres.style = "font-family: Montserrat; color: white;";
 
-  let color = document.createElement("p");
+  let color = document.createElement("li");
   color.className = "color";
   color.innerText = `Favorite Color: ${json[x].color}`;
   color.style = "font-family: Montserrat; color: white;";
 
   //Occupations
-  let companies = document.createElement("p");
+  let companies = document.createElement("li");
   companies.className = "companies";
   companies.innerText = `Company: ${json[x].companies}`;
   companies.style = "font-family: Montserrat; color: white;";
 
-  let slogan = document.createElement("p");
+  let slogan = document.createElement("li");
   slogan.className = "slogan";
   slogan.innerText = `Company Slogan: ${json[x].slogan}`;
   slogan.style = "font-family: Montserrat; color: white;";
 
-  let job = document.createElement("p");
+  let job = document.createElement("li");
   job.className = "job";
   job.innerText = `Job Title: ${json[x].job}`;
   job.style = "font-family: Montserrat; color: white;";
 
-  let catch_phrase = document.createElement("p");
+  let catch_phrase = document.createElement("li");
   catch_phrase.className = "catch_phrase";
   catch_phrase.innerText = `Interview Catch Phrase: ${json[x].catch_phrase}`;
   catch_phrase.style = "font-family: Montserrat; color: white;";
 
-  let buzzword = document.createElement("p");
+  let buzzword = document.createElement("li");
   buzzword.className = "buzzword";
   buzzword.innerText = `Favorite Plant: ${json[x].buzzword}`;
   buzzword.style = "font-family: Montserrat; color:white;";
 
   //Car
-  let make = document.createElement("p");
+  let make = document.createElement("li");
   make.className = "make";
   make.innerText = `Make: ${json[x].make}`;
   make.style = "font-family: Montserrat; color: white;";
 
-  let model = document.createElement("p");
+  let model = document.createElement("li");
   model.className = "model";
   model.innerText = `Model: ${json[x].model}`;
   model.style = "font-family: Montserrat; color: white;";
 
-  let year = document.createElement("p");
+  let year = document.createElement("li");
   year.className = "year";
   year.innerText = `Year: ${json[x].year}`;
-  year.style = "font-fam1ily: Montserrat; color: white;";
+  year.style = "font-family: Montserrat; color: white;";
 
   //Demographics
-  let race = document.createElement("p");
+  let race = document.createElement("li");
   race.className = "race";
   race.innerText = `Race: ${json[x].race}`;
   race.style = "font-family: Montserrat; color: white;";
 
-  let university = document.createElement("p");
+  let university = document.createElement("li");
   university.className = "university";
   university.innerText = `University: ${json[x].university}`;
   university.style = "font-family: Montserrat; color: white;";
 
-  let city = document.createElement("p");
+  let city = document.createElement("li");
   city.className = "city";
   city.innerText = `City: ${json[x].city}`;
   city.style = "font-family: Montserrat; color: white;";
 
-  let state = document.createElement("p");
+  let state = document.createElement("li");
   state.className = "state";
   state.innerText = `State: ${json[x].state}`;
   state.style = "font-family: Montserrat; color: white;";
 
-  let country = document.createElement("p");
+  let country = document.createElement("li");
   country.className = "country";
   country.innerText = `Country: ${json[x].country}`;
   country.style = "font-family: Montserrat; color: white;";
 
-  let title = document.createElement("h3");
-  title.className = "title";
-  title.innerText = "All Categories";
-  title.style = "font-family: Montserrat; color: white;";
-
   //HTML BUILD
 
-  character.removeChild(placeholder);
-  character.appendChild(animal);
-  character.appendChild(plant);
-  character.appendChild(genres);
-  character.appendChild(color);
-  character.appendChild(companies);
-  character.appendChild(job);
-  character.appendChild(slogan);
-  character.appendChild(catch_phrase);
-  character.appendChild(buzzword);
-  character.appendChild(make);
-  character.appendChild(model);
-  character.appendChild(year);
-  character.appendChild(race);
-  character.appendChild(university);
-  character.appendChild(city);
-  character.appendChild(state);
-  character.appendChild(country);
+  characterleft.appendChild(animal);
+  characterleft.appendChild(plant);
+  characterleft.appendChild(genres);
+  characterleft.appendChild(color);
+  characterleft.appendChild(companies);
+  characterleft.appendChild(job);
+  characterleft.appendChild(slogan);
+  characterleft.appendChild(catch_phrase);
+  characterleft.appendChild(buzzword);
+  characterleft.appendChild(make);
+  characterleft.appendChild(model);
+  characterleft.appendChild(year);
+  characterleft.appendChild(race);
+  characterleft.appendChild(university);
+  characterleft.appendChild(city);
+  characterleft.appendChild(state);
+  characterleft.appendChild(country);
 };
 
 favoritesButton.addEventListener("click", favData);
@@ -162,6 +157,7 @@ async function favData() {
   console.log(json);
   displayFav(json);
 }
+
 let displayFav = (json) => {
   let x = getRandomNumber(0, json.length - 1);
 
@@ -185,14 +181,12 @@ let displayFav = (json) => {
   color.innerText = `Favorite Color: ${json[x].color}`;
   color.style = "font-family: Montserrat; color: white;";
 
-
   //FAVORiTES HTMl
 
-  character.removeChild(placeholder);
-  character.appendChild(animal);
-  character.appendChild(plant);
-  character.appendChild(genres);
-  character.appendChild(color);
+  characterleft.appendChild(animal);
+  characterleft.appendChild(plant);
+  characterleft.appendChild(genres);
+  characterleft.appendChild(color);
 };
 
 occupationButton.addEventListener("click", jobData);
@@ -231,24 +225,14 @@ let displayJob = (json) => {
   buzzword.innerText = `Buzzword: ${json[x].buzzword}`;
   buzzword.style = "font-family: Montserrat; color:white;";
 
-  let title = document.createElement("h3");
-  title.className = "title";
-  title.innerText = "Occupation Categories";
-  title.style = "font-family: Montserrat; color: white;";
 
   //OCCUPATiONS HTML
 
-  character.removeChild(placeholder);
-  character.appendChild(companies);
-  character.appendChild(job);
-  character.appendChild(slogan);
-  character.appendChild(catch_phrase);
-  character.appendChild(buzzword);
-
-  //clean search
-  while (character.firstChild) {
-    character.removeChild(character.firstChild);
-  }
+  characterleft.appendChild(companies);
+  characterleft.appendChild(job);
+  characterleft.appendChild(slogan);
+  characterleft.appendChild(catch_phrase);
+  characterleft.appendChild(buzzword);
 };
 
 carButton.addEventListener("click", carData);
@@ -275,24 +259,13 @@ let displayCar = (json) => {
   let year = document.createElement("p");
   year.className = "year";
   year.innerText = `Year: ${json[x].year}`;
-  year.style = "font-fam1ily: Montserrat; color: white;";
-
-  let title = document.createElement("h3");
-  title.className = "title";
-  title.innerText = "Car Categories";
-  title.style = "font-family: Montserrat; color: white;";
+  year.style = "font-family: Montserrat; color: white;";
 
   //CAR HTML
 
-  character.removeChild(placeholder);
-  character.appendChild(make);
-  character.appendChild(model);
-  character.appendChild(year);
-
-  //clean search
-  while (character.firstChild) {
-    character.removeChild(character.firstChild);
-  }
+  characterleft.appendChild(make);
+  characterleft.appendChild(model);
+  characterleft.appendChild(year);
 };
 
 demographicsButton.addEventListener("click", demographicsData);
@@ -304,7 +277,7 @@ async function demographicsData() {
 }
 
 let displayDemo = (json) => {
-  let x = getRandomNumber(0, json.length - 1);
+let x = getRandomNumber(0, json.length - 1);
 
   let race = document.createElement("p");
   race.className = "race";
@@ -331,26 +304,37 @@ let displayDemo = (json) => {
   country.innerText = `Country: ${json[x].country}`;
   country.style = "font-family: Montserrat; color: white;";
 
-  let title = document.createElement("h3");
-  title.className = "title";
-  title.innerText = "Demographic Categories";
-  title.style = "font-family: Montserrat; color: white;";
 
   //DEMOGRAPHiCS HTML
 
-  character.removeChild(placeholder);
-  character.appendChild(race);
-  character.appendChild(university);
-  character.appendChild(city);
-  character.appendChild(state);
-  character.appendChild(country);
-
-  //clean search
-  while (character.firstChild) {
-    character.removeChild(character.firstChild);
-  }
+  characterleft.appendChild(race);
+  characterleft.appendChild(university);
+  characterleft.appendChild(city);
+  characterleft.appendChild(state);
+  characterleft.appendChild(country);
 };
 
+//Unsplash Random Photos
+let Rand = '/photos/random';
+
+// picButton.addEventListener("click", randPhoto);
+
+// async function randPhoto() {
+//   let response = await fetch(unsplash + Rand);
+//   console.log(response);
+//   displayPhoto(response);
+// };
+
+// let displayPhoto = (response) => {
+
+// let photo = document.createElement(img);
+// photo.className = 'pic';
+// photo.innerText = `Photo Prompt: ${photo}`;
+
+// console.log(photo);
+
+// characterright.appendChild('img');
+// };
 
 
 //Responsive topnav.

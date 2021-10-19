@@ -14,6 +14,19 @@ p{
     border: 2px solid white;
     border-radius: 50%;
     margin-top: 200px;
+    margin-left: 50px;
+    position: fixed;
+    color: white;
+    background-color: #555;
+}
+
+.pic {
+    height: 3rem;
+    width: auto;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 400px;
+    margin-top: 600px;
     position: fixed;
     color: white;
     background-color: #555;
@@ -185,29 +198,15 @@ form {
     background-color: black;
     grid-area: character;
     padding: 20px;  
-    grid-template-areas: "resultsid1 resultsid2 resultsid3"
-                         "resultsid4 resultsid5 resultsid6";
-    grid-template-columns: auto auto auto;
+    grid-template-areas: "characterleft characterright";
+    grid-template-columns: 50% 50%;
+}
+.characterleft {
+  grid-area: characterleft;
 }
 
-.resultsid1 {
-  display:block;
-}
-.resultsid2 {
-  display:block;
-}
-.resultsid3 {
-  display:block;
-}
-.resultsid4 {
-  display:block;
-}
-.resultsid5 {
-  display:block;
-}
-
-.resultsid6 {
-  display:block;
+.characterright {
+  grid-area: characterright;
 }
 .sidebarright {
     display:grid;

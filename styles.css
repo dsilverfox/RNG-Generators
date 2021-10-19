@@ -2,6 +2,7 @@ body, p, li{
     font-family: 'Montserrat', sans-serif;
     list-style-type:none;
     color: white;
+    font-size: 14px;
 }
 
 .submit {
@@ -18,15 +19,16 @@ body, p, li{
 #controls a {
   position: fixed; 
   margin-top: 550px;
-  left: -165px; 
+  left: -7rem; 
   transition: 0.3s; 
-  padding: 15px; 
-  width: 200px; 
+  padding: 1rem; 
+  width: 12rem; 
   text-decoration: none; 
   font-size: 20px; 
   color: white; 
   border-radius: 0 5px 5px 0; 
 }
+
 
 #controls a:hover {
   left: 0; 
@@ -34,27 +36,27 @@ body, p, li{
 
 
 #all {
-  top: 20px;
+  top: 2rem;
   background-color: red;
 }
 
 #stats {
-  top: 80px;
+  top: 5rem;
   background-color: #555; 
 }
 
 #background {
-  top: 140px;
+  top: 8rem;
   background-color: red; 
 }
 
 #race {
-  top: 200px;
+  top: 11rem;
   background-color: #555 
 }
 
 #generate {
-    top:260px;
+    top:14rem;
     background-color: red;
 }
 
@@ -134,12 +136,11 @@ form {
     width: 100%;
     background: black;
     display: grid;
-    grid-template-columns: 432px auto 432px;
+    grid-template-columns: 20vw 60vw 20vw;
     grid-template-areas: 'Left Center Right';
 }
 
 .item1 {
-    width: 432px;
     display:grid;
     background-color: black;
     grid-area: Left;
@@ -153,7 +154,6 @@ form {
     grid-area: Center;
 }
 .item3 {
-    width: 432px;
     display:grid;
     background-color:black;
     grid-area: Right;
@@ -165,7 +165,7 @@ form {
     width: 100%;
     background: black;
     display: grid;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 20vw 70vw 20vw;
     grid-template-areas: 'sidebarleft character sidebarright';   
 }
 
@@ -181,7 +181,7 @@ form {
     font-family: 'Shadows Into Light', cursive;
     background-color: black;
     grid-area: character;
-    padding: 20px;
+    padding: 2rem;
     grid-template-areas: "charactertop characterbottom";
     grid-template-columns: 50% 50%;                       
 }
@@ -207,10 +207,9 @@ form {
     display:grid;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    width:100%;
-    height: 75px;
+    width:100vw;
+    height: 3rem;
     text-align: center;
-    position: absolute;
     color: white;
     list-style-type:none;
     grid-template-columns: "footer footer footer"

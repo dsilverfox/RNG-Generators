@@ -2,6 +2,7 @@ body, p{
     font-family: 'Montserrat', sans-serif;
     list-style-type:none;
     color: white;
+    font-size: 14px;
 }
 
 p{
@@ -13,8 +14,8 @@ p{
     width: auto;
     border: 2px solid white;
     border-radius: 50%;
-    margin-top: 200px;
-    margin-left: 50px;
+    margin-top: 9rem;
+    margin-left: 1rem;
     position: fixed;
     color: white;
     background-color: #555;
@@ -25,8 +26,8 @@ p{
     width: auto;
     border: 2px solid white;
     border-radius: 50%;
-    margin-left: 400px;
-    margin-top: 600px;
+    margin-left: 18rem;
+    margin-top: 27rem;
     position: fixed;
     color: white;
     background-color: #555;
@@ -35,10 +36,10 @@ p{
 #controls a {
   position: fixed; 
   margin-top: 550px;
-  left: -165px; 
+  left: -7rem; 
   transition: 0.3s; 
-  padding: 15px; 
-  width: 210px; 
+  padding: 1rem; 
+  width: 12rem; 
   text-decoration: none; 
   font-size: 20px; 
   color: white; 
@@ -51,27 +52,27 @@ p{
 
 
 #id1 {
-  top: 20px;
+  top: 2rem;
   background-color: red;
 }
 
 #id2 {
-  top: 80px;
+  top: 4.5rem;
   background-color: #555; 
 }
 
 #id3 {
-  top: 140px;
+  top: 7rem;
   background-color: red; 
 }
 
 #id4 {
-  top: 200px;
+  top: 9.5rem;
   background-color: #555 
 }
 
 #id5 {
-    top:260px;
+    top:12rem;
     background-color: red;
 }
 
@@ -146,15 +147,14 @@ form {
 
 .container1 {
     min-height: 150px;
-    width: 100%;
+    width: 100vw;
     background: black;
     display: grid;
-    grid-template-columns: 432px auto 432px;
+    grid-template-columns: 20rem 60rem 20rem;
     grid-template-areas: 'Left Center Right';
 }
 
 .item1 {
-    width: 432px;
     display:grid;
     background-color: black;
     grid-area: Left;
@@ -168,7 +168,6 @@ form {
     grid-area: Center;
 }
 .item3 {
-    width: 432px;
     display:grid;
     background-color:black;
     grid-area: Right;
@@ -177,10 +176,10 @@ form {
 
 .container2{
     min-height: 150px;
-    width: 100%;
+    width: 100vw;
     background: black;
     display: grid;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 8vw 84vw 8vw;
     grid-template-areas: 'sidebarleft character sidebarright';   
 }
 
@@ -197,7 +196,7 @@ form {
     font-family: 'Shadows Into Light', cursive;
     background-color: black;
     grid-area: character;
-    padding: 20px;  
+    padding: 2rem;  
     grid-template-areas: "characterleft characterright";
     grid-template-columns: 50% 50%;
 }
@@ -216,15 +215,15 @@ form {
 }
 
 .footerleft {
-  height: 200px;
-  width: 200px;
+  height: 9rem;
+  width: 8rem;
   align-self:flex-end;
 }
 .footer{
     font-family: 'Montserrat', sans-serif;
     background-color: black;
     width:100%;
-    height: 130px;
+    height: 3rem;
     text-align: center;
     position:relative;
     color: white;
@@ -234,6 +233,6 @@ form {
     align-self: flex-end;
 }
 .footerright{
-    height: 200px;
-    width: 200px;
+    height: 9rem;
+    width: 8rem;
 }

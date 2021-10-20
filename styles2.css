@@ -74,7 +74,6 @@ p{
 #id5 {
     top:12rem;
     background-color: red;
-    bottom: 15rem;
 }
 
 .topnav {
@@ -217,7 +216,7 @@ form {
 
 .footerleft {
   height: 9rem;
-  width: 8rem;
+  width: 6.5rem;
   align-self:flex-end;
 }
 .footer{

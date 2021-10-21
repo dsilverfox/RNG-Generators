@@ -21,7 +21,7 @@ p{
     background-color: #555;
 }
 
-.pic {
+/* .pic {
     height: 3rem;
     width: auto;
     border: 2px solid white;
@@ -31,12 +31,12 @@ p{
     position: fixed;
     color: white;
     background-color: #555;
-}
+} */
 
 #controls a {
   position: fixed; 
-  margin-top: 550px;
-  left: -7rem; 
+  margin-top: 20rem;
+  left: -9rem; 
   transition: 0.3s; 
   padding: 1rem; 
   width: 12rem; 
@@ -50,10 +50,18 @@ p{
   left: 0; 
 }
 
+#controls a i {
+  float: right;
+}
 
 #id1 {
   top: 2rem;
   background-color: red;
+}
+
+#id1:hover::before {
+  content: "All Categories";
+  margin-left: 20px;
 }
 
 #id2 {
@@ -61,9 +69,19 @@ p{
   background-color: #555; 
 }
 
+#id2:hover::before {
+  content: "Favorites";
+  margin-left: 20px;
+}
+
 #id3 {
   top: 7rem;
   background-color: red; 
+}
+
+#id3:hover::before {
+  content: "Occupation";
+  margin-left: 20px;
 }
 
 #id4 {
@@ -71,9 +89,19 @@ p{
   background-color: #555 
 }
 
+#id4:hover::before {
+  content: "Car";
+  margin-left: 25px;
+}
+
 #id5 {
     top:12rem;
     background-color: red;
+}
+
+#id5:hover::before {
+  content: "Demographics";
+  margin-left: 20px;
 }
 
 .topnav {
@@ -150,7 +178,7 @@ form {
     width: 100vw;
     background: black;
     display: grid;
-    grid-template-columns: 20rem 60rem 20rem;
+    grid-template-columns: 20vw 60vw 20vw;
     grid-template-areas: 'Left Center Right';
 }
 
@@ -196,7 +224,7 @@ form {
     font-family: 'Shadows Into Light', cursive;
     background-color: black;
     grid-area: character;
-    padding: 2rem;  
+    padding: 2vw;  
     grid-template-areas: "characterleft characterright";
     grid-template-columns: 50% 50%;
 }

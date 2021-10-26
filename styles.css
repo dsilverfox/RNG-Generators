@@ -3,6 +3,7 @@ body, p, li{
     list-style-type:none;
     color: white;
     font-size: 14px;
+    overflow: hidden;
 }
 
 .submit {
@@ -168,7 +169,7 @@ form {
     width: 100%;
     background: black;
     display: grid;
-    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-columns: 20% 60% 20%;
     grid-template-areas: 'Left Center Right';
 }
 
@@ -197,7 +198,7 @@ form {
     width: 100%;
     background: black;
     display: grid;
-    grid-template-columns: 20vw 70vw 20vw;
+    grid-template-columns: 20% 70% 20%;
     grid-template-areas: 'sidebarleft character sidebarright';   
 }
 
@@ -240,7 +241,7 @@ form {
     display:grid;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    width:100vw;
+    width:100%;
     height: 3rem;
     text-align: center;
     color: white;

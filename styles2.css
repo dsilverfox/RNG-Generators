@@ -3,6 +3,7 @@ body, p{
     list-style-type:none;
     color: white;
     font-size: 14px;
+    overflow: hidden;
 }
 
 p{
@@ -175,10 +176,10 @@ form {
 
 .container1 {
     min-height: 150px;
-    width: 100vw;
+    width: 100%;
     background: black;
     display: grid;
-    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-columns: 20% 60% 20%;
     grid-template-areas: 'Left Center Right';
 }
 
@@ -204,10 +205,10 @@ form {
 
 .container2{
     min-height: 150px;
-    width: 100vw;
+    width: 100%;
     background: black;
     display: grid;
-    grid-template-columns: 8vw 84vw 8vw;
+    grid-template-columns: 10% 80% 10%;
     grid-template-areas: 'sidebarleft character sidebarright';   
 }
 

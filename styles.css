@@ -3,7 +3,7 @@ body, p, li{
     list-style-type:none;
     color: white;
     font-size: 14px;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .submit {

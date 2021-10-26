@@ -204,7 +204,7 @@ form {
 }
 
 .container2{
-    min-height: 150px;
+    min-height: 200%;
     width: 100%;
     background: black;
     display: grid;

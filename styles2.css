@@ -3,7 +3,7 @@ body, p{
     list-style-type:none;
     color: white;
     font-size: 14px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 p{
